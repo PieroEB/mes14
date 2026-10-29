@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ddd2f5">
+<meta name="description" content="Un universo de momentos que todavía nos quedan por vivir."><title>Para mi amorcita hermosa ♡</title>
+<link rel="stylesheet" href="styles.css"><script defer src="content.js"></script><script defer src="couple.js"></script><script defer src="world.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#bosque">Saltar al recorrido</a>
+<canvas id="world" aria-hidden="true"></canvas><div id="dust" aria-hidden="true"></div><canvas id="sparkles" aria-hidden="true"></canvas><div id="progress" aria-hidden="true"></div>
+<header class="hud"><a class="signature" href="#entrada"><span>✦</span> tú + yo</a><div class="hud-actions"><button id="music" aria-pressed="false" aria-label="Activar ambiente musical">♫</button><button id="map-open">El mapa <span>↗</span></button></div></header>
+<main id="story">
+<section class="chapter entrance" id="entrada" data-name="El comienzo" data-world="portal">
+  <div class="opening-copy"><p class="kicker">UN UNIVERSO HECHO PARA TI</p><h1>Mi amorcita<br><span>hermosa.</span></h1><p>Por estos 14 meses juntos…<br>y por muchos, muchos más.<br><em>No sabes cuánto te amo.</em></p></div>
+  <button class="guest ash" id="ash-hello" aria-label="Leer la bienvenida de Ash"><img src="assets/ash.png" alt="Ash Ketchum sentado junto a Pikachu"><span class="guest-tag">ASH + PIKACHU <b>¡Hola! ↗</b></span></button>
+  <button class="guest justin" id="justin-hello" aria-label="Leer la bienvenida de Justin Bieber"><img src="assets/justin.jpg" alt="Ilustración de Justin Bieber cantando con gorra y micrófono"><span class="guest-tag">JUSTIN BIEBER <b>Para ti ♫</b></span></button>
+  <div id="greeting" class="greeting" role="status" hidden></div>
+  <div class="enter"><button class="magic-button" data-next>Entrar a nuestro mundo <span>→</span></button><p>O desliza despacito. Aquí no hay prisa.</p></div>
+  <small class="fan-note">Una aventura imaginada para nuestro aniversario.</small>
+</section>
+<section class="chapter forest" id="bosque" data-name="El bosque de los sueños" data-world="forest">
+  <div class="forest-copy"><p class="chapter-no">01 / LO MÁS BONITO</p><h2>Lo más bonito<br>es estar<br><em>contigo.</em></h2><p>Me das tranquilidad y alegría,<br>y lo mejor de mis días es pasarlos contigo.</p></div>
+  <button class="firefly f1" data-dream="risas" aria-label="Descubrir el sueño de las risas"><span>✦</span><small>01</small></button>
+  <button class="firefly f2" data-dream="abrazo" aria-label="Descubrir el sueño de un abrazo"><span>✦</span><small>02</small></button>
+  <button class="firefly f3" data-dream="dias" aria-label="Descubrir el sueño de los días juntos"><span>✦</span><small>03</small></button>
+  <p class="forest-secret" id="forest-secret" aria-live="polite">Sigue las lucecitas.</p>
+</section>
+<section class="chapter station" id="abrazo" data-name="El abrazo pendiente" data-world="station">
+  <div class="station-copy"><p class="chapter-no">02 / DESTINO: TUS BRAZOS</p><h2>No tienes idea<br><span>de cuánto espero ese día.</span></h2><p>El día de volver a verte y volver a sentirte. <br>Te extraño muchísimo, pero saber que estás ahí <br>y que voy a volver a verte es lo que me sostiene.</p></div>
+  <button class="boarding-pass" id="ticket" aria-expanded="false"><div class="ticket-main"><span class="ticket-label">BILLETE PARA DOS</span><div class="ticket-route"><b>AQUÍ</b><span>✈</span><b>CONTIGO</b></div><div class="ticket-data"><span>PASAJEROS<strong>Tú + yo</strong></span><span>EQUIPAJE<strong>Abrazos pendientes</strong></span></div><span class="ticket-small">Válido para un abrazo de esos que no se terminan.</span></div><div class="ticket-stub"><span>ABRIR<br>EL BILLETE</span><b>↗</b></div></button>
+  <p class="ticket-message" id="ticket-message" aria-live="polite"></p>
+</section>
+<section class="chapter cafe" id="cafe" data-name="Un café sin despedidas" data-world="cafe">
+  <div class="cafe-copy"><span class="handwriting">mesa reservada para dos</span><h2>Lo hermoso es contigo.</h2><p>Ir a cafeterías, conversar por horas y conocer lugares nuevos…<br>todo es más bonito si es contigo.</p></div>
+  <button class="cup-hotspot cup-left" data-cup="tu" aria-label="Tocar tu taza de café"><span>tu taza ♡</span></button><button class="cup-hotspot cup-right" data-cup="mi" aria-label="Tocar mi taza de café"><span>mi taza ♡</span></button>
+  <p class="cafe-message" id="cafe-message" aria-live="polite">Toca una de las tazas.</p>
+</section>
+<section class="chapter picnic" id="paseo" data-name="Perdernos juntos" data-world="park">
+  <div class="picnic-copy"><p class="chapter-no">04 / CADA PASEO CONTIGO</p><h2>Cada paseo,<br><em>cada momento.</em></h2><p>Caminar juntitos, hablando de todo… <br>no sabes lo hermoso que es. Te amo tanto, de verdad.</p></div>
+  <div class="direction-sign"><span>ELIGE POR DÓNDE SEGUIMOS</span><button data-route="lake" aria-pressed="true">← Junto al lago</button><button data-route="garden" aria-pressed="false">Entre las flores →</button></div>
+  <p class="route-message" id="route-message" aria-live="polite">Junto al lago: tu cabeza en mi hombro y el agua sonando bajito.</p>
+</section>
+<section class="chapter sunset" id="atardecer" data-name="El cielo para dos" data-world="sunset">
+  <p class="chapter-no">05 / EL DÍA QUE CAMBIEMOS ESTA FRASE</p>
+  <div class="sunset-copy"><h2 id="sunset-title"><span>Ojalá</span><br>estuvieras aquí.</h2><p id="sunset-line">Arrastra el sol hasta el horizonte.</p></div>
+  <div class="sun-control"><span aria-hidden="true">☀</span><label class="sr-only" for="sun-slider">Mover el sol hacia el atardecer</label><input id="sun-slider" type="range" min="0" max="100" value="10"><span aria-hidden="true">☾</span></div>
+</section>
+<section class="chapter cinema" id="pelicula" data-name="Una noche cualquiera" data-world="cinema">
+  <div class="cinema-screen"><p>PRÓXIMAMENTE EN NUESTRO SOFÁ</p><h2 id="movie-title">Una, dos…<br><em>o más de mil.</em></h2><span id="movie-subtitle">Todas las películas que nos esperan para verlas juntos.</span></div>
+  <button class="light-switch" id="lights" aria-pressed="false"><i></i><span>Apaga las luces</span></button>
+  <p class="cinema-note">Manta para dos. Quedarse dormidos está permitido.</p>
+</section>
+<section class="chapter rainy" id="lluvia" data-name="También cuando llueva" data-world="rain">
+  <div class="rain-copy"><p class="chapter-no">07 / TAMBIÉN LOS DÍAS GRISES</p><h2>Llueva<br>o haga <em>sol.</em></h2><p>No importa el clima ni el momento:<br>juntos lo vamos a superar todo.</p><button class="outline-button" id="umbrella" aria-pressed="false">Abre nuestro paraguas ☂</button><p id="rain-message" aria-live="polite"></p></div>
+</section>
+<section class="chapter travel" id="viaje" data-name="El mundo de tu mano" data-world="travel">
+  <div class="travel-copy"><p class="chapter-no">08 / DOS BILLETES, UN MISMO DESTINO</p><h2>Me falta mundo.<br><span>Me sobran ganas</span><br>de verlo contigo.</h2><p id="trip-message" aria-live="polite">Montañas: frío, tu mano en mi bolsillo y una vista que no va a ser lo más bonito que mire.</p></div>
+  <div class="destination-picker"><span>¿A DÓNDE NOS ESCAPAMOS?</span><button data-destination="mountain" aria-pressed="true">A las montañas</button><button data-destination="sea" aria-pressed="false">Al mar</button><button data-destination="city" aria-pressed="false">A una ciudad nueva</button></div>
+</section>
+<section class="chapter constellations" id="estrellas" data-name="Nuestro deseo" data-world="stars">
+  <div class="stars-copy"><p class="chapter-no">09 / BAJO EL MISMO CIELO</p><h2>Nuestros deseos,<br>nuestras metas,<br><em>juntos.</em></h2><p>Avanzando y creciendo juntos, paso a paso.<br>Enciende las cinco estrellas.</p></div>
+  <div class="constellation" aria-label="Cinco estrellas para descubrir un corazón"><button class="wish-star s1" data-star="0" aria-label="Encender primera estrella">✦</button><button class="wish-star s2" data-star="1" aria-label="Encender segunda estrella">✦</button><button class="wish-star s3" data-star="2" aria-label="Encender tercera estrella">✦</button><button class="wish-star s4" data-star="3" aria-label="Encender cuarta estrella">✦</button><button class="wish-star s5" data-star="4" aria-label="Encender quinta estrella">✦</button><svg viewBox="0 0 400 380" aria-hidden="true"><path id="heart-line" d="M200 330C130 270 40 213 40 125C40 35 155 16 200 105C245 16 360 35 360 125C360 213 270 270 200 330Z"/></svg></div>
+  <form id="wish-form"><label for="wish">Un deseo para nuestro futuro</label><div><input id="wish" maxlength="160" placeholder="Algún día, tú y yo…" autocomplete="off"><button type="submit" aria-label="Guardar mi deseo">↑</button></div><p id="wish-message" aria-live="polite">Tu deseo se queda guardado en este navegador.</p></form>
+</section>
+<section class="chapter home" id="hogar" data-name="Nuestro próximo capítulo" data-world="home">
+  <div class="home-copy"><span class="handwriting">y después de todos los lugares…</span><h2>Mi plan favorito<br>siempre serás <em>tú.</em></h2><p>Y poder verte todos los días de mi vida:<br>desayunar juntos, reírnos de tonterías<br>y que estés ahí cuando me dé la vuelta.</p><button class="magic-button" id="door">Abre nuestra puerta <span>♡</span></button></div>
+  <div class="final-letter" id="final-letter" hidden><span class="handwriting">esto apenas empieza</span><h2>Feliz aniversario,<br><em id="recipient">mi amor.</em></h2><p id="letter-text">Ninguna de estas escenas es un recuerdo todavía.<br>Pero me encanta pensar que algún día lo serán.</p><button class="magic-button" id="plans-open">Elige nuestra primera cita →</button><p id="chosen-plan" aria-live="polite"></p><span class="signed" id="signed">Con amor, yo.</span><a href="#entrada">Volver a empezar ↺</a></div>
+</section>
+</main>
+<nav class="journey-nav" aria-label="Controles del recorrido"><button id="previous" aria-label="Escena anterior">↑</button><div><span id="scene-number">PRÓLOGO</span><strong id="scene-name">El comienzo</strong></div><button id="next" aria-label="Escena siguiente">↓</button></nav>
+<dialog id="map-dialog"><button class="dialog-close" aria-label="Cerrar mapa">×</button><p class="kicker">NO HAY UN SOLO CAMINO BONITO</p><h2>Nuestro pequeño universo.</h2><nav id="chapter-links" aria-label="Elegir una escena"></nav><button class="credits-open">Sobre las ilustraciones</button></dialog>
+<dialog id="plans-dialog"><button class="dialog-close" aria-label="Cerrar elección">×</button><p class="kicker">UNA CITA PARA EMPEZAR</p><h2>¿Cuál hacemos realidad primero?</h2><div id="plan-options"></div><p class="local-note">La elección se guarda aquí, en tu navegador.</p></dialog>
+<dialog id="credits-dialog"><button class="dialog-close" aria-label="Cerrar créditos">×</button><h2>Unos invitados especiales.</h2><p>Esta es una escena ficticia de un regalo personal; los diálogos fueron escritos para esta página.</p><p>Ash y Pikachu: arte de Pokémon, obtenido de <a href="https://archives.bulbagarden.net/wiki/File:Ash_with_Pikachu.png" target="_blank" rel="noopener">Bulbagarden Archives</a>.</p><p>Justin Bieber: ilustración firmada @JensenNart, encontrada en <a href="https://reidosticker.com.br/collections/stickers/internet?page=13" target="_blank" rel="noopener">Rei do Sticker</a>. Se conserva la firma en la imagen.</p><p>Los paisajes, las caricaturas de nosotros dos, las animaciones y la melodía instrumental se crearon para esta experiencia.</p></dialog>
+<button id="note-open" class="note-open" hidden>✉ <span>Una nota para ti</span></button>
+<dialog id="note-dialog"><button class="dialog-close" aria-label="Cerrar nota">×</button><p class="kicker" id="note-scene"></p><p class="note-text" id="note-text"></p><span class="signed" id="note-signed"></span></dialog>
+<div id="toast" role="status"></div>
+</body></html>
+

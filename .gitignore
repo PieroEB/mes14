@@ -1,0 +1,6 @@
+# Solo se publica la página; esto se queda en tu compu
+.respaldo-aprobado/
+PARA-ESCRIBIR.md
+README.md
+server.cjs
+.DS_Store
