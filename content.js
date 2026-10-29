@@ -1,7 +1,7 @@
 // Datos de la pareja: cambia los nombres cuando quieras.
 window.GIFT = {
   recipient: 'mi amor', // Aparece en «Feliz aniversario, …».
-  sender: 'yo',         // Tu firma: «Con amor, …».
+  sender: 'tu novio que te ama tanto',         // Tu firma: «Con amor, …».
   photos: {},           // Opcional: photos: { cafe: 'assets/nosotros-cafe.jpg' }.
 
   // ✍️ TUS NOTAS: escribe entre las comillas `así`. Puedes usar varias líneas.
